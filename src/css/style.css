@@ -1,0 +1,60 @@
+body {
+  background-color: #5fe0e0;
+  margin: 2%;
+}
+
+a[target] {
+  background-color: #f8afaf;
+  font-size: 1.4rem;
+  padding: 15px;
+  display: block;
+  width: 40%;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+a[target=_blank] {
+  background-color: #fcbe4c;
+}
+
+.contGrid {
+  display: grid;
+  grid-template-columns: 60% 50%;
+  margin-top: 30px;
+  border: 1px solid black;
+  align-items: center;
+}
+.contGrid *[alt~=k2] {
+  margin-top: 10px;
+  border: 2px solid black;
+  border-radius: 4%;
+  width: 45%;
+}
+.contGrid [class|=claseimagen] {
+  margin-top: 10px;
+  border: 2px solid black;
+  border-radius: 4%;
+  width: 45%;
+}
+
+.contenedorGrid {
+  display: grid;
+  grid-template-columns: 60% 50%;
+  margin-top: 30px;
+  border: 1px solid black;
+  align-items: center;
+}
+.contenedorGrid [class$=to1] {
+  margin-top: 10px;
+  border: 2px solid black;
+  border-radius: 4%;
+  width: 45%;
+}
+.contenedorGrid [class*=prueba] {
+  margin-top: 10px;
+  border: 2px solid black;
+  border-radius: 4%;
+  width: 45%;
+}
+
+/*# sourceMappingURL=style.css.map */
