@@ -23,6 +23,33 @@ const Ejemplo1 = () => {
 
 }
 
+const Ejemplo2 = () => {
+
+    return(
+
+        <div>
+            <form action="" method="post" name="formu2" id="formu2Id"> 
+                <fieldset>
+                    <legend> Campos de tipo input text que tienen un ancho del 60% </legend>
+
+                    <label for="nombre2Id"> Nombre: </label>
+                    <input type="text" name="nombre" id="nombre2Id"></input> <br/><br/>
+
+                    <label for="ap2Id"> Apellidos: </label>
+                    <input type="text" name="apellidos" id="ap2Id"></input> <br/><br/>
+
+                    <label for="buscarId"> Busqueda: </label>
+                    <input className="busqueda" name="buscar" type="text" id="buscar" id="buscarId"/> <br/><br/>
+
+                    <input type="submit" value="Enviar"></input>
+                </fieldset>
+            </form>
+        </div>
+
+    )
+
+}
+
 
 class Formularios extends Component {
 
@@ -31,7 +58,8 @@ class Formularios extends Component {
         return(
 
             <div>
-                <Ejemplo1/>
+                {/* <Ejemplo1/> */}
+                <Ejemplo2/>
             </div>
 
         )
