@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 /*
 import SelectoresAtributos from './SelectoresAtributo'
 import BoxSizing from './BoxSizing'*/
