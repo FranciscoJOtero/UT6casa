@@ -1,7 +1,9 @@
 body {
 
-    background-color: rgb(95, 224, 224);
-    margin:1%;
+    background-color: rgb(67, 185, 221);
+    margin: 0 auto; 
+    max-width: 79em; 
+    padding: 1em 0;
 }
 
 /* **********************  AMPLIACION PARTE 1 ************************************************************* */
@@ -265,7 +267,7 @@ header, aside, article, footer {
     min-height: 25vh;
 } */
 
-/* EJEMPLO HOLY GRAIL EL TERCER EJEMPLO DEL MANUAL 2 columnas flexibles con cabecera y pie */
+/* **************  EJEMPLO HOLY GRAIL EL TERCER EJEMPLO DEL MANUAL 2 columnas flexibles con cabecera y pie *******************
 
 .gridContenedor {
 
@@ -305,4 +307,54 @@ header, aside, article, footer {
 
 
 
+} */
+
+/* ************** CUARTO EJEMPLO DEL MANUAL 2 columnas flexibles con cabecera y pie *******************/
+
+.gridContenedor {
+
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: 10vh 65vh 10vh; 
+    grid-gap: 1em;
+
+    .cabecera, .pie {
+
+        grid-column: 1 / span 5;
+        
+    }
+
+    main {
+
+        grid-column: 1 / span 3;
+
+    }
+
+    aside {
+
+        grid-column: span 2;
+
+    }
+
+    @media (max-width: 700px) { 
+
+        main, aside { 
+            
+            grid-column: 1 / span 5; 
+        }
+    }
+
 }
+
+header, main, aside, footer {
+    
+    background: #eaeaea; 
+    display: flex; align-items: 
+    center; justify-content: 
+    center; 
+} 
+header, footer { 
+
+    height: 10vh;
+}
+    
