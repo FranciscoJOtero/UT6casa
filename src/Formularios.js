@@ -72,7 +72,7 @@ class Formularios extends Component {
         return(
 
             <div>
-                 <Ejemplo1/>
+                <Ejemplo1/>
                 <Ejemplo2/>
             </div>
 
