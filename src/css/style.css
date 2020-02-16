@@ -1,45 +1,97 @@
 body {
   background-color: #5fe0e0;
-  margin: 10px;
+  margin: 0 auto;
+  max-width: 80em;
+  padding: 1em 0;
 }
 
+/* **********************  AMPLIACION PARTE 1 ************************************************************* */
+/* **********************************  A PARTIR DE AQUI ES LA AMPLIACION PARTE 2 *******************************************
+
+        EJEMPLO HOLY GRAIL FLEXIBLE EL PRIMERO EJEMPLO DEL MANUAL */
+/*.gridContenedor {
+
+    display: grid;
+    grid-template-columns: 200px auto 200px;
+    grid-gap: 1rem;
+    width: 100%;
+    min-height: 500px;
+    >* {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+
+    }
+    .cabecera, .pie {
+
+        height: 80px;
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+    .barraIzquierda, .barraDerecha {
+
+        min-height: 420px;
+        padding: 10px;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    .articulo {
+
+        font-size: 1.8rem;
+        font-weight: bold;
+        min-height: 420px;
+    }
+}
+header, aside, article, footer {
+
+    background: #eaeaea;
+}
+
+header, footer {
+
+    grid-column: 1 /4;
+}*/
+/* EJEMPLO HOLY GRAIL RESPONSIVO EL SEGUNDO EJEMPLO DEL MANUAL */
 .gridContenedor {
   display: grid;
-  grid-template-columns: 200px auto 200px;
+  grid-template-columns: 150px auto 150px;
   grid-gap: 1rem;
   width: 100%;
-  min-height: 500px;
-}
-.gridContenedor > * {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
 }
 .gridContenedor .cabecera, .gridContenedor .pie {
-  height: 80px;
-  font-size: 1.4rem;
+  grid-column: 1/4;
+  font-size: 2rem;
   font-weight: bold;
 }
-.gridContenedor .barraIzquierda, .gridContenedor .barraDerecha {
-  min-height: 420px;
-  padding: 10px;
-  text-align: center;
-  font-size: 1.2rem;
+.gridContenedor aside, .gridContenedor article {
+  min-height: 250px;
+  box-sizing: border-box;
+  padding: 20px;
+  font-size: 1.3rem;
   font-weight: bold;
 }
-.gridContenedor .articulo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  min-height: 420px;
+@media all and (max-width: 700px) {
+  .gridContenedor aside, .gridContenedor article {
+    grid-column: 1/4;
+    min-height: 250px;
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
 }
 
 header, aside, article, footer {
   background: #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 25vh;
 }
 
-header, footer {
-  grid-column: 1/4;
-}
+/* EJEMPLO HOLY GRAIL RESPONSIVO EL TERCER EJEMPLO DEL MANUAL */
 
 /*# sourceMappingURL=style.css.map */
