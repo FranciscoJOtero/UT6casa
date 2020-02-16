@@ -1,60 +1,72 @@
+@charset "UTF-8";
 body {
   background-color: #43b9dd;
-  margin: 0 auto;
-  max-width: 79em;
-  padding: 1em 0;
 }
 
 /* **********************  AMPLIACION PARTE 1 ************************************************************* */
 /* **********************************  A PARTIR DE AQUI ES LA AMPLIACION PARTE 2 *******************************************
 
-        EJEMPLO HOLY GRAIL FLEXIBLE EL PRIMERO EJEMPLO DEL MANUAL */
-/*.gridContenedor {
+        EJEMPLO HOLY GRAIL FLEXIBLE EL PRIMERO EJEMPLO DEL MANUAL 
+
+.gridContenedor {
 
     display: grid;
     grid-template-columns: 200px auto 200px;
     grid-gap: 1rem;
     width: 100%;
     min-height: 500px;
-    >* {
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-sizing: border-box;
-
-    }
     .cabecera, .pie {
 
+        grid-column: 1 / 4;
         height: 80px;
         font-size: 1.4rem;
         font-weight: bold;
+        background: #eaeaea;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    .barraIzquierda, .barraDerecha {
+    .barraIzquierda {
 
+        grid-column: 1/2;
         min-height: 420px;
         padding: 10px;
         text-align: center;
         font-size: 1.2rem;
         font-weight: bold;
+        background: #eaeaea;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+
+    .barraDerecha {
+
+        grid-column: 3/4;
+        min-height: 420px;
+        padding: 10px;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+        background: #eaeaea;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .articulo {
 
         font-size: 1.8rem;
         font-weight: bold;
         min-height: 420px;
+        background: #eaeaea;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-}
-header, aside, article, footer {
-
-    background: #eaeaea;
-}
-
-header, footer {
-
-    grid-column: 1 /4;
-}*/
-/* EJEMPLO HOLY GRAIL RESPONSIVO EL SEGUNDO EJEMPLO DEL MANUAL 
+} */
+/* EJEMPLO HOLY GRAIL RESPONSIVO EL SEGUNDO EJEMPLO DEL MANUAL  
 
 .gridContenedor {
 
@@ -102,7 +114,7 @@ header, aside, article, footer {
     justify-content: center; 
     min-height: 25vh;
 } */
-/* **************  EJEMPLO HOLY GRAIL EL TERCER EJEMPLO DEL MANUAL 2 columnas flexibles con cabecera y pie *******************
+/* **************  EJEMPLO HOLY GRAIL EL TERCER EJEMPLO DEL MANUAL 2 columnas flexibles con cabecera y pie ****************** 
 
 .gridContenedor {
 
@@ -139,41 +151,209 @@ header, aside, article, footer {
         font-weight: bold;
 
     }
-
-
-
 } */
-/* ************** CUARTO EJEMPLO DEL MANUAL 2 columnas flexibles con cabecera y pie *******************/
+/* ************** CUARTO EJEMPLO DEL MANUAL 2 columnas flexibles con cabecera y pie *****************
+
 .gridContenedor {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 10vh 65vh 10vh;
-  grid-gap: 1em;
-}
-.gridContenedor .cabecera, .gridContenedor .pie {
-  grid-column: 1/span 5;
-}
-.gridContenedor main {
-  grid-column: 1/span 3;
-}
-.gridContenedor aside {
-  grid-column: span 2;
-}
-@media (max-width: 700px) {
-  .gridContenedor main, .gridContenedor aside {
-    grid-column: 1/span 5;
-  }
+
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: 10vh 65vh 10vh; 
+    grid-gap: 1em;
+
+    .cabecera, .pie {
+
+        grid-column: 1 / span 5;
+
+    }
+
+    main {
+
+        grid-column: 1 / span 3;
+
+    }
+
+    aside {
+
+        grid-column: span 2;
+
+    }
+
+    @media (max-width: 700px) { 
+
+        main, aside { 
+
+            grid-column: 1 / span 5; 
+        }
+    }
+
 }
 
 header, main, aside, footer {
-  background: #eaeaea;
+
+    background: #eaeaea; 
+    display: flex; align-items: 
+    center; justify-content: 
+    center; 
+} 
+header, footer { 
+
+    height: 10vh;
+} */
+/*  ULTIMO EJEMPLO DEL MANUAL CON UN DISEÑO MARCADO POR EL PROFESOR
+
+    Cabecera y pie de ancho completo y un main de 3 columnas. Diseño Responsivo
+    La cabecera tendra un nav de 3 items */
+.ContainerGrid {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  border: 2px solid black;
+  box-sizing: border-box;
+}
+.ContainerGrid__cabecera {
+  grid-column: 1/4;
+  border: 2px solid black;
+  min-height: 50px;
+  padding: 20px;
+}
+.ContainerGrid__cabecera__menu {
+  border: 2px solid purple;
+  width: 90%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  padding: 20px;
+}
+.ContainerGrid__cabecera__menu > div {
+  width: 200px;
+  border: 2px solid yellow;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.ContainerGrid__main {
+  grid-column: 2/3;
+  border: 2px solid blue;
+  padding: 20px;
+  min-height: 600px;
+  text-align: justify;
+}
+.ContainerGrid__main > h3 {
+  text-align: center;
+}
+.ContainerGrid__aside1 {
+  grid-column: 1/2;
+  border: 2px solid green;
+  min-height: 600px;
+}
+.ContainerGrid__aside1 > a {
+  text-decoration: none;
+  text-transform: capitalize;
+  display: block;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 20px;
+  color: black;
+}
+.ContainerGrid__aside2 {
+  grid-column: 3/4;
+  border: 2px solid green;
+  min-height: 600px;
+}
+.ContainerGrid__aside2 > a {
+  text-decoration: none;
+  text-transform: capitalize;
+  display: block;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 20px;
+  color: black;
+}
+.ContainerGrid__pie {
+  grid-column: 1/4;
+  border: 2px solid red;
+  min-height: 50px;
+  text-align: center;
+  padding: 10px;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
-header, footer {
-  height: 10vh;
+@media (max-width: 800px) {
+  .ContainerGrid {
+    display: grid;
+    grid-template-columns: 100%;
+    border: 2px solid black;
+    box-sizing: border-box;
+  }
+  .ContainerGrid__cabecera {
+    grid-column: 1/4;
+    border: 2px solid black;
+    min-height: 50px;
+    padding: 20px;
+  }
+  .ContainerGrid__cabecera__menu {
+    border: 2px solid purple;
+    width: 90%;
+    display: block;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  .ContainerGrid__cabecera__menu > div {
+    width: 200px;
+    border: 2px solid yellow;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.4rem;
+  }
+  .ContainerGrid__main {
+    grid-column: 1/4;
+    border: 2px solid blue;
+    padding: 20px;
+    min-height: 600px;
+    text-align: justify;
+  }
+  .ContainerGrid__main > h3 {
+    text-align: center;
+  }
+  .ContainerGrid__aside1 {
+    grid-column: 1/4;
+    border: 2px solid green;
+    min-height: 600px;
+  }
+  .ContainerGrid__aside1 > a {
+    text-decoration: none;
+    text-transform: capitalize;
+    display: block;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 20px;
+    color: black;
+  }
+  .ContainerGrid__aside2 {
+    grid-column: 1/4;
+    border: 2px solid green;
+    min-height: 600px;
+  }
+  .ContainerGrid__aside2 > a {
+    text-decoration: none;
+    text-transform: capitalize;
+    display: block;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 20px;
+    color: black;
+  }
+  .ContainerGrid__pie {
+    grid-column: 1/4;
+    border: 2px solid red;
+    min-height: 50px;
+    text-align: center;
+    padding: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

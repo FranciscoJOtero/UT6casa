@@ -5,7 +5,6 @@ class EjemplosGrid2 extends Component {
     render() {
 
         return(
-
             <div className="gridContenedor">
                 <header className="cabecera">
                     Esta es la cabecera de ancho completo Holy Grail Flexible
@@ -27,10 +26,7 @@ class EjemplosGrid2 extends Component {
                     Este es el pie de pagina con ancho completo de Holy Grail Flexible
                 </footer>
             </div>
-
         )
-
     }
 }
-
 export default EjemplosGrid2
